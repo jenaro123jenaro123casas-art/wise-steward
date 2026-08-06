@@ -5,6 +5,36 @@ function setVh(){
 setVh();
 window.addEventListener('resize', setVh);
 
+// Fit content to viewport by scaling if it overflows (mobile devices)
+function fitToViewport(){
+  const el = document.querySelector('.screen');
+  if(!el) return;
+  // reset any previous transform to measure natural height
+  el.style.transformOrigin = 'top center';
+  el.style.transform = '';
+  el.style.height = '';
+
+  // measure after paint
+  requestAnimationFrame(()=>{
+    const contentHeight = el.scrollHeight;
+    const vh = window.innerHeight;
+    if(contentHeight > vh){
+      // calculate scale factor, clamp to 0.55 minimum
+      let scale = vh / contentHeight;
+      if(scale < 0.55) scale = 0.55;
+      el.style.transform = `scale(${scale})`;
+      // preserve the clickable area by increasing container height
+      el.style.height = `${contentHeight * scale}px`;
+    } else {
+      el.style.transform = '';
+      el.style.height = '';
+    }
+  });
+}
+
+window.addEventListener('resize', fitToViewport);
+window.addEventListener('orientationchange', fitToViewport);
+
 const splash = document.getElementById("splash");
 
 const login = document.getElementById("login");
@@ -358,11 +388,21 @@ function showLesson(){
 
   lessonTitle.innerHTML = lessons[currentLesson].title;
 
-lessonContent.innerHTML = lessons[currentLesson].content;
+  lessonContent.innerHTML = lessons[currentLesson].content;
 
-let percent=((currentLesson+1)/lessons.length)*100;
+  let percent=((currentLesson+1)/lessons.length)*100;
 
-document.getElementById("progressBar").style.width=percent+"%";
+  document.getElementById("progressBar").style.width=percent+"%";
+
+  // After rendering, attempt to fit the lesson content to the viewport on small devices
+  if(window.innerWidth <= 480){
+    // small delay to let images / fonts render
+    setTimeout(fitToViewport, 80);
+  } else {
+    // ensure any previous transforms are cleared on larger screens
+    const el = document.querySelector('.screen');
+    if(el){ el.style.transform = ''; el.style.height = ''; }
+  }
 
 document.getElementById("progressText").innerHTML=
 "Hakbang "+(currentLesson+1)+" sa "+lessons.length;
@@ -513,9 +553,9 @@ else{
     alert("ðŸŽ‰ Binabati kita!\n\nNatapos mo ang aralin.\nIbabalik ka sa Dashboard upang piliin ang susunod na gawain.");
 
     lesson.style.display = "none";
-    // remove compact-top when leaving lesson view
+    // remove compact-top when leaving lesson view and clear scaling
     document.body.classList.remove('compact-top');
-    
+    const el = document.querySelector('.screen'); if(el){ el.style.transform=''; el.style.height=''; }
     dashboard.style.display = "flex";
 
 }
@@ -539,10 +579,11 @@ const backDashboard=document.getElementById("backDashboard");
 
 backDashboard.onclick=function(){
 
-lesson.style.display="none";
-document.body.classList.remove('compact-top');
+  lesson.style.display="none";
+  document.body.classList.remove('compact-top');
+  const el = document.querySelector('.screen'); if(el){ el.style.transform=''; el.style.height=''; }
 
-dashboard.style.display="flex";
+  dashboard.style.display="flex";
 
 }
 
