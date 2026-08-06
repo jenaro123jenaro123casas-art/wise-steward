@@ -17,7 +17,13 @@ body{
   min-height:100vh; /* allow browser chrome without cutting content */
   display:flex;
   flex-direction:column;
+  justify-content:flex-start;
+}
+
+/* Utility: center short screens */
+.screen.centered{
   justify-content:center;
+}
   align-items:center;
   text-align:center;
   padding:20px;
