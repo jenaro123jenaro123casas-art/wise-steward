@@ -62,6 +62,8 @@ button:hover{opacity:0.95}
   #lessonCard{padding:8px}
   .screen{padding-top:calc(12px + env(safe-area-inset-top, 0px))}
 }
+/* Compact-top helper: add extra top padding for lesson views on phones */
+.compact-top .screen{padding-top:calc(28px + env(safe-area-inset-top, 0px))}
 
 /* Desktop / larger */
 @media (min-width:1024px){

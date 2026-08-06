@@ -353,7 +353,10 @@ const lessonContent = document.getElementById("lessonContent");
 
 function showLesson(){
 
-lessonTitle.innerHTML = lessons[currentLesson].title;
+  // add compact top offset class to avoid browser UI overlap on phones
+  document.body.classList.add('compact-top');
+
+  lessonTitle.innerHTML = lessons[currentLesson].title;
 
 lessonContent.innerHTML = lessons[currentLesson].content;
 
@@ -510,7 +513,9 @@ else{
     alert("ðŸŽ‰ Binabati kita!\n\nNatapos mo ang aralin.\nIbabalik ka sa Dashboard upang piliin ang susunod na gawain.");
 
     lesson.style.display = "none";
-
+    // remove compact-top when leaving lesson view
+    document.body.classList.remove('compact-top');
+    
     dashboard.style.display = "flex";
 
 }
@@ -535,6 +540,7 @@ const backDashboard=document.getElementById("backDashboard");
 backDashboard.onclick=function(){
 
 lesson.style.display="none";
+document.body.classList.remove('compact-top');
 
 dashboard.style.display="flex";
 
