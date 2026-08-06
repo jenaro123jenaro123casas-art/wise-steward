@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wise Steward</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#2E7D32">
+
+</head>
+
+<body>
+
+<div id="splash" class="screen">
+
+    <h1>💰 Wise Steward</h1>
+
+    <h2>Grade 7 Values Education</h2>
+
+    <p>
+        Nakapag-uugnay sa kahalagahan ng pagtitipid at pag-iimpok
+        sa sariling pangangasiwa sa mga biyaya ng Diyos.
+    </p>
+
+    <button id="startBtn">
+        Start Learning
+    </button>
+
+</div>
+
+<div id="login" class="screen" style="display:none;">
+
+<h1>Welcome!</h1>
+
+<input
+type="text"
+id="studentName"
+placeholder="Enter your name">
+
+<br><br>
+
+<input
+type="text"
+id="studentSection"
+placeholder="Enter your section">
+
+<br><br>
+
+<button id="loginBtn">
+Continue
+</button>
+
+</div>
+
+<!-- Dashboard -->
+
+<div id="dashboard" class="screen" style="display:none;">
+
+    <h1>💰 Wise Steward</h1>
+
+    <h2 id="welcomeText"></h2>
+
+    <h3>⭐ Level 1</h3>
+
+    <h3>💎 XP: 0</h3>
+
+    <button id="learnBtn">📖 Learn</button>
+
+    <button id="playBtn">🎮 Play</button>
+
+    <button id="reflectionBtn">📝 Reflection</button>
+
+    <button id="certificateBtn">🏆 Certificate</button>
+
+</div>
+
+<!-- ========================= -->
+<!-- INTERACTIVE LESSON -->
+<!-- ========================= -->
+
+<div id="lesson" class="screen" style="display:none;">
+
+<h1>📖 Lesson 1</h1>
+
+<div id="progressContainer">
+
+<div id="progressBar"></div>
+
+</div>
+
+<p id="progressText"></p>
+
+<div id="lessonCard">
+
+<h2 id="lessonTitle"></h2>
+
+<p id="lessonContent"></p>
+
+</div>
+
+<div>
+
+<button id="prevBtn">⬅ Previous</button>
+
+<button id="nextBtn">Next ➡</button>
+
+</div>
+
+<button id="backDashboard">
+🏠 Back to Dashboard
+</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
