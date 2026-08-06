@@ -1,117 +1,73 @@
-/* Responsive improvements */
+/* Mobile-first responsive stylesheet - compact so all text fits on phones */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background:#4CAF50;
   color:white;
-  font-size:10px;  /* further reduced global font size to fit small phones */
+  font-size:10px; /* small base size */
   -webkit-font-smoothing:antialiased;
-  /* Respect device safe areas (notch/status bar) */
-  padding-top: env(safe-area-inset-top, 20px);
-  padding-bottom: env(safe-area-inset-bottom, 12px);
+  padding-top: env(safe-area-inset-top, 8px);
+  padding-bottom: env(safe-area-inset-bottom, 8px);
 }
 
+/* Use dynamic viewport height to avoid overlap with mobile browser chrome */
 .screen{
- min-height:calc(var(--vh, 1vh) * 100);
- display:flex;
- flex-direction:column;
- justify-content:flex-start;
- align-items:center;
- text-align:center;
- padding:12px;
- padding-top: calc(12px + env(safe-area-inset-top, 0px));
- padding-bottom: calc(12px + env(safe-area-inset-bottom, 0px));
- overflow:auto; /* make screens scrollable on small devices */
+  min-height:calc(var(--vh, 1vh) * 100);
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start; /* start at top so content isn't hidden */
+  align-items:center;
+  text-align:center;
+  padding:10px 10px 12px 10px;
+  overflow:auto;
 }
 
-/* Utility: center short screens */
-.screen.centered{
- justify-content:center;
-}
+/* Center short screens (splash, login, dashboard) */
+.screen.centered{justify-content:center}
 
-input{
-  width:100%;
-  max-width:320px;
-  padding:12px;
-  font-size:16px;
-  border:none;
-  border-radius:10px;
-}
+/* Controls */
+input, textarea{width:100%;max-width:100%;padding:8px;font-size:11px;border:1px solid rgba(0,0,0,0.12);border-radius:8px;background:#fff;box-sizing:border-box}
+button{margin-top:10px;padding:8px 14px;font-size:11px;background:#FFD54F;border:none;border-radius:8px;cursor:pointer}
+button:hover{opacity:0.95}
+#dashboard button{width:100%;max-width:220px;margin:8px}
 
-button{
-  margin-top:16px;
-  padding:12px 28px;
-  font-size:18px;
-  background:#FFD54F;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-}
+/* Header / welcome */
+#welcomeText{margin-bottom:10px}
 
-button:hover{
-  opacity:0.95; /* avoid layout shifts from scale */
-}
+/* Lesson card - narrow and compact */
+#lessonCard{background:white;color:#333;width:96%;max-width:720px;padding:10px;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.12);margin-bottom:10px}
+#lessonTitle{color:#2E7D32;margin-bottom:8px;font-size:14px}
+#lessonContent{font-size:11px;line-height:1.35}
+#lesson button{margin:6px}
 
-#dashboard button{
-  width:100%;
-  max-width:250px;
-  margin:10px;
-}
+/* Progress */
+#progressContainer{width:96%;max-width:700px;height:12px;background:#ddd;border-radius:20px;overflow:hidden;margin-top:8px}
+#progressBar{height:100%;width:0%;background:#4CAF50;transition:.35s}
+#progressText{font-weight:bold;margin:8px}
+#lessonImage{width:110px;max-width:80%;margin-bottom:10px;border-radius:8px}
 
-#welcomeText{margin-bottom:16px}
-
-/* ===========================
-   LESSON CARD
-   =========================== */
-#lessonCard{
-  background:white;
-  color:#333;
-  width:90%;
-  max-width:700px;
-  padding:20px;
-  border-radius:16px;
-  box-shadow:0 5px 15px rgba(0,0,0,0.15);
-  margin-bottom:20px;
-}
-
-#lessonTitle{color:#2E7D32;margin-bottom:16px}
-
-#lessonContent{font-size:18px;line-height:1.6}
-
-#lesson button{margin:8px}
-
-/* =======================
-   PROGRESS BAR
-   ====================== */
-#progressContainer{
-  width:90%;
-  max-width:700px;
-  height:18px;
-  background:#ddd;
-  border-radius:20px;
-  overflow:hidden;
-  margin-top:10px;
-}
-
-#progressBar{height:100%;width:0%;background:#4CAF50;transition:.5s}
-#progressText{font-weight:bold;margin:12px}
-
-#lessonImage{width:160px;max-width:80%;margin-bottom:16px;border-radius:12px}
-
-/* Small screens adjustments */
-@media (max-width:480px){
-  /* Even smaller for very small phones */
+/* Very small screens */
+@media (max-width:420px){
   body{font-size:9px}
-  h1{font-size:14px;margin:4px 0}
-  h2{font-size:13px;margin:3px 0}
-  h3{font-size:12px;margin:3px 0}
-  #lessonContent{font-size:11px;line-height:1.25}
-  button{font-size:11px;padding:6px 8px}
-  input, textarea{font-size:11px}
-  textarea{min-height:120px}
-  input{max-width:100%}
-  #lessonCard{padding:6px;border-radius:8px}
-  #progressContainer{width:95%}
+  h1{font-size:16px}
+  h2{font-size:14px}
+  h3{font-size:13px}
+  #lessonTitle{font-size:13px}
+  #lessonContent{font-size:10px;line-height:1.2}
+  button{font-size:10px;padding:6px 10px}
+  input, textarea{font-size:10px}
+  textarea{min-height:90px}
+  #lessonCard{padding:8px}
+  .screen{padding-top:calc(12px + env(safe-area-inset-top, 0px))}
 }
+
+/* Desktop / larger */
+@media (min-width:1024px){
+  body{font-size:16px}
+  #lessonCard{padding:24px;border-radius:16px}
+  #lessonContent{font-size:18px;line-height:1.6}
+  #lessonTitle{font-size:20px}
+}
+
