@@ -103,10 +103,15 @@ button:hover{
 
 /* Small screens adjustments */
 @media (max-width:480px){
-  body{font-size:15px}
-  #lessonContent{font-size:16px}
-  button{font-size:16px;padding:10px 20px}
+  /* Smaller base font to fit content under mobile browser UI */
+  body{font-size:14px}
+  h1{font-size:20px;margin:8px 0}
+  h2{font-size:18px;margin:6px 0}
+  h3{font-size:16px;margin:6px 0}
+  #lessonContent{font-size:15px;line-height:1.4}
+  button{font-size:15px;padding:8px 16px}
+  input, textarea{font-size:15px}
   input{max-width:100%}
-  #lessonCard{padding:16px;border-radius:12px}
+  #lessonCard{padding:12px;border-radius:10px}
   #progressContainer{width:95%}
 }
