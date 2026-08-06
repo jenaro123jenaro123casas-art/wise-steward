@@ -6,7 +6,7 @@ body{
   font-family: Arial, sans-serif;
   background:#4CAF50;
   color:white;
-  font-size:11px;  /* aggressively reduced global font size to fit mobile screens */
+  font-size:10px;  /* further reduced global font size to fit small phones */
   -webkit-font-smoothing:antialiased;
   /* Respect device safe areas (notch/status bar) */
   padding-top: env(safe-area-inset-top, 20px);
@@ -102,15 +102,16 @@ button:hover{
 
 /* Small screens adjustments */
 @media (max-width:480px){
-  /* Aggressive small-screen sizing */
-  body{font-size:10px}
-  h1{font-size:16px;margin:6px 0}
-  h2{font-size:14px;margin:4px 0}
-  h3{font-size:13px;margin:4px 0}
-  #lessonContent{font-size:12px;line-height:1.3}
-  button{font-size:12px;padding:6px 10px}
-  input, textarea{font-size:12px}
+  /* Even smaller for very small phones */
+  body{font-size:9px}
+  h1{font-size:14px;margin:4px 0}
+  h2{font-size:13px;margin:3px 0}
+  h3{font-size:12px;margin:3px 0}
+  #lessonContent{font-size:11px;line-height:1.25}
+  button{font-size:11px;padding:6px 8px}
+  input, textarea{font-size:11px}
+  textarea{min-height:120px}
   input{max-width:100%}
-  #lessonCard{padding:8px;border-radius:8px}
+  #lessonCard{padding:6px;border-radius:8px}
   #progressContainer{width:95%}
 }
