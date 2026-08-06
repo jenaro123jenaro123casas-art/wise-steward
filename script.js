@@ -1,4 +1,4 @@
-const splash = document.getElementById("splash");
+﻿const splash = document.getElementById("splash");
 
 const login = document.getElementById("login");
 
@@ -48,16 +48,16 @@ LESSON DATA
 const lessons = [
 
 {
-title:"📖 Kuwento: Ang Regalo ni Maria",
+title:"ðŸ“– Kuwento: Ang Regalo ni Maria",
 content:`
-Si <strong>Maria</strong> ay nagdiwang ng kanyang kaarawan. Bilang regalo, binigyan siya ng kanyang lola ng <strong>₱500</strong>.
+Si <strong>Maria</strong> ay nagdiwang ng kanyang kaarawan. Bilang regalo, binigyan siya ng kanyang lola ng <strong>â‚±500</strong>.
 
 Habang pauwi, nakita niya ang mga bagay na gusto niyang bilhin:
 
-🍔 Burger – ₱150<br>
-🎮 Mobile Game – ₱250<br>
-📚 Kuwaderno – ₱80<br>
-💰 Magtabi ng pera para sa hinaharap
+ðŸ” Burger â€“ â‚±150<br>
+ðŸŽ® Mobile Game â€“ â‚±250<br>
+ðŸ“š Kuwaderno â€“ â‚±80<br>
+ðŸ’° Magtabi ng pera para sa hinaharap
 
 <hr>
 
@@ -75,7 +75,7 @@ style="width:100%;font-size:20px;"></textarea>
 <br><br>
 
 <button onclick="checkStoryAnswer()">
-📋 Suriin ang Sagot
+ðŸ“‹ Suriin ang Sagot
 </button>
 
 <br><br>
@@ -87,7 +87,7 @@ style="width:100%;font-size:20px;"></textarea>
 },
 
 {
-title:"🌱 Layunin ng Aralin",
+title:"ðŸŒ± Layunin ng Aralin",
 content:`
 Sa araling ito, matututuhan mo ang kahalagahan ng
 <strong>pagtitipid</strong> at
@@ -97,14 +97,14 @@ bilang mabuting tagapangasiwa ng mga biyayang ipinagkaloob ng Diyos.
 },
 
 {
-title:"🎁 Mga Biyaya ng Diyos",
+title:"ðŸŽ Mga Biyaya ng Diyos",
 content:`
-👨‍👩‍👧 Pamilya<br>
-❤️ Kalusugan<br>
-📚 Edukasyon<br>
-🎁 Talento<br>
-⏰ Oras<br>
-💰 Pera
+ðŸ‘¨â€ðŸ‘©â€ðŸ‘§ Pamilya<br>
+â¤ï¸ Kalusugan<br>
+ðŸ“š Edukasyon<br>
+ðŸŽ Talento<br>
+â° Oras<br>
+ðŸ’° Pera
 
 <br><br>
 
@@ -113,7 +113,7 @@ Ang lahat ng ito ay biyayang mula sa Diyos kaya dapat natin itong gamitin nang m
 },
 
 {
-title:"💰 Ano ang Mabuting Tagapangasiwa?",
+title:"ðŸ’° Ano ang Mabuting Tagapangasiwa?",
 content:`
 Ang mabuting tagapangasiwa ay marunong gumamit ng kanyang oras,
 talento, at pera nang may pananagutan.
@@ -124,7 +124,7 @@ ng mga biyaya ng Diyos.
 },
 
 {
-title:"🎯 Gawain 1",
+title:"ðŸŽ¯ Gawain 1",
 content:`
 
 <h3>Ano ang pinakamainam na gawin ni Maria?</h3>
@@ -133,28 +133,28 @@ content:`
 
 <label>
 <input type="radio" name="answer" value="A">
-🍔 Bilhin ang burger.
+ðŸ” Bilhin ang burger.
 </label>
 
 <br><br>
 
 <label>
 <input type="radio" name="answer" value="B">
-🎮 Bilhin ang mobile game.
+ðŸŽ® Bilhin ang mobile game.
 </label>
 
 <br><br>
 
 <label>
 <input type="radio" name="answer" value="C">
-📚 Bilhin ang kuwaderno at ipunin ang natitirang pera.
+ðŸ“š Bilhin ang kuwaderno at ipunin ang natitirang pera.
 </label>
 
 <br><br>
 
 <label>
 <input type="radio" name="answer" value="D">
-💸 Gastusin ang buong ₱500.
+ðŸ’¸ Gastusin ang buong â‚±500.
 </label>
 
 </form>
@@ -171,7 +171,7 @@ Isumite ang Sagot
 },
 
 {
-title:"🎮 Laro: Pangangailangan o Kagustuhan",
+title:"ðŸŽ® Laro: Pangangailangan o Kagustuhan",
 
 content:`
 
@@ -181,14 +181,14 @@ content:`
 
 <hr>
 
-<h1 id="gameWord">🍚 Bigas</h1>
+<h1 id="gameWord">ðŸš Bigas</h1>
 
 <button onclick="checkGame('need')">
-🥖 Pangangailangan
+ðŸ¥– Pangangailangan
 </button>
 
 <button onclick="checkGame('want')">
-🎁 Kagustuhan
+ðŸŽ Kagustuhan
 </button>
 
 <br><br>
@@ -202,7 +202,7 @@ content:`
 
 ,
 {
-title:"📝 Pagninilay",
+title:"ðŸ“ Pagninilay",
 
 content:`
 
@@ -232,7 +232,7 @@ placeholder="Isulat dito ang iyong sagot..."></textarea>
 <br><br>
 
 <button onclick="submitReflection()">
-💾 Isumite ang Pagninilay
+ðŸ’¾ Isumite ang Pagninilay
 </button>
 
 <br><br>
@@ -243,7 +243,7 @@ placeholder="Isulat dito ang iyong sagot..."></textarea>
 },
 
 {
-title:"🏆 Sertipiko ng Pagkumpleto",
+title:"ðŸ† Sertipiko ng Pagkumpleto",
 
 content:`
 
@@ -266,7 +266,7 @@ text-align:center;
 <hr>
 
 <h1 style="color:#2E7D32;font-size:48px;">
-🏆 CERTIFICATE OF COMPLETION
+ðŸ† CERTIFICATE OF COMPLETION
 </h1>
 
 <p>
@@ -312,7 +312,7 @@ for successfully completing the Interactive Learning Module in
 <br><br>
 
 <button onclick="window.print()">
-🖨️ I-print ang Sertipiko
+ðŸ–¨ï¸ I-print ang Sertipiko
 </button>
 
 </div>
@@ -325,7 +325,7 @@ for successfully completing the Interactive Learning Module in
 let currentLesson = 0;
 
 let activityFinished = false;
-let gameFinished = false;
+
 let reflectionFinished = false;
 
 let storyPassed = false;
@@ -358,14 +358,14 @@ document.getElementById("progressText").innerHTML=
 "Hakbang "+(currentLesson+1)+" sa "+lessons.length;
 
 // GAME
-if(lessons[currentLesson].title==="🎮 Laro: Pangangailangan o Kagustuhan"){
+if(lessons[currentLesson].title==="ðŸŽ® Laro: Pangangailangan o Kagustuhan"){
 
     setTimeout(startGame,100);
 
 }
 
 // CERTIFICATE
-if(lessons[currentLesson].title==="🏆 Sertipiko ng Pagkumpleto"){
+if(lessons[currentLesson].title==="ðŸ† Sertipiko ng Pagkumpleto"){
 
     let studentName = localStorage.getItem("studentName");
 
@@ -439,21 +439,21 @@ certificateBtn.onclick = function(){
 let kulang = [];
 
 if(!activityFinished){
-    kulang.push("✔ Gawain");
+    kulang.push("âœ” Gawain");
 }
 
 if(!gameFinished){
-    kulang.push("✔ Laro");
+    kulang.push("âœ” Laro");
 }
 
 if(!reflectionFinished){
-    kulang.push("✔ Pagninilay");
+    kulang.push("âœ” Pagninilay");
 }
 
 if(kulang.length > 0){
 
 alert(
-"🔒 Hindi pa maaaring makuha ang Sertipiko.\n\n" +
+"ðŸ”’ Hindi pa maaaring makuha ang Sertipiko.\n\n" +
 "Pakikumpleto muna ang sumusunod:\n\n" +
 kulang.join("\n")
 );
@@ -481,7 +481,7 @@ if(currentLesson===0){
 
     if(!storyPassed){
 
-        alert("Kailangan mo munang pindutin ang '📋 Suriin ang Sagot' at makakuha ng hindi bababa sa 6/10 bago magpatuloy.");
+        alert("Kailangan mo munang pindutin ang 'ðŸ“‹ Suriin ang Sagot' at makakuha ng hindi bababa sa 6/10 bago magpatuloy.");
 
         return;
 
@@ -500,7 +500,7 @@ else{
 
     activityFinished = true;
 
-    alert("🎉 Binabati kita!\n\nNatapos mo ang aralin.\nIbabalik ka sa Dashboard upang piliin ang susunod na gawain.");
+    alert("ðŸŽ‰ Binabati kita!\n\nNatapos mo ang aralin.\nIbabalik ka sa Dashboard upang piliin ang susunod na gawain.");
 
     lesson.style.display = "none";
 
@@ -550,13 +550,13 @@ if(answer.value=="C"){
 activityFinished = true;
 
 document.getElementById("activityResult").innerHTML=
-"✅ Tama! Ang pagbili ng kailangan at pag-iimpok ng natitirang pera ay nagpapakita ng pagiging mabuting tagapangasiwa.";
+"âœ… Tama! Ang pagbili ng kailangan at pag-iimpok ng natitirang pera ay nagpapakita ng pagiging mabuting tagapangasiwa.";
 
 }else{
 
 document.getElementById("activityResult").innerHTML=
 
-"❌ Hindi pa tama. Isipin kung paano maipapakita ang pagtitipid at pag-iimpok.";
+"âŒ Hindi pa tama. Isipin kung paano maipapakita ang pagtitipid at pag-iimpok.";
 
 }
 
@@ -568,25 +568,25 @@ document.getElementById("activityResult").innerHTML=
 
 const gameItems = [
 
-{word:"🍚 Bigas",answer:"need"},
+{word:"ðŸš Bigas",answer:"need"},
 
-{word:"📚 Kuwaderno",answer:"need"},
+{word:"ðŸ“š Kuwaderno",answer:"need"},
 
-{word:"💊 Gamot",answer:"need"},
+{word:"ðŸ’Š Gamot",answer:"need"},
 
-{word:"👕 Uniporme",answer:"need"},
+{word:"ðŸ‘• Uniporme",answer:"need"},
 
-{word:"💡 Bayad sa Kuryente",answer:"need"},
+{word:"ðŸ’¡ Bayad sa Kuryente",answer:"need"},
 
-{word:"🧋 Milk Tea",answer:"want"},
+{word:"ðŸ§‹ Milk Tea",answer:"want"},
 
-{word:"🎮 Mobile Game",answer:"want"},
+{word:"ðŸŽ® Mobile Game",answer:"want"},
 
-{word:"🍟 French Fries",answer:"want"},
+{word:"ðŸŸ French Fries",answer:"want"},
 
-{word:"🎧 Headset",answer:"want"},
+{word:"ðŸŽ§ Headset",answer:"want"},
 
-{word:"⌚ Mamahaling Relo",answer:"want"}
+{word:"âŒš Mamahaling Relo",answer:"want"}
 
 ];
 
@@ -595,7 +595,7 @@ let gamePoints = 0;
 
 function startGame(){
 
-let gameFinished = false;
+
 
 gameNumber = 0;
 gamePoints = 0;
@@ -623,12 +623,12 @@ if(choice===gameItems[gameNumber].answer){
 gamePoints++;
 
 document.getElementById("gameFeedback").innerHTML =
-"✅ Tama!";
+"âœ… Tama!";
 
 }else{
 
 document.getElementById("gameFeedback").innerHTML =
-"❌ Mali.";
+"âŒ Mali.";
 
 }
 
@@ -643,7 +643,7 @@ showGame();
 }else{
 
 document.getElementById("gameWord").innerHTML =
-"🎉 Natapos mo ang laro!";
+"ðŸŽ‰ Natapos mo ang laro!";
 
 document.getElementById("gameFeedback").innerHTML =
 "Final Score: " + gamePoints + " / " + gameItems.length;
@@ -690,7 +690,7 @@ color:#155724;
 font-size:20px;
 ">
 
-✅ Mahusay!
+âœ… Mahusay!
 
 Naipakita mo ang iyong pag-unawa sa kahalagahan ng
 pagtitipid at pag-iimpok bilang mabuting katiwala ng
@@ -724,7 +724,7 @@ let score = 0;
 if(
 answer.includes("kuwaderno") ||
 answer.includes("paaralan") ||
-answer.includes("Burger") ||
+answer.includes("burger") ||
 answer.includes("pera") ||
 answer.includes("pangangailangan")
 ){
@@ -789,7 +789,7 @@ score += 3;
 // Mahabang paliwanag
 // ============================
 
-if(answer.length>=5){
+if(answer.length>=50){
 
 score += 3;
 
@@ -800,28 +800,28 @@ score += 3;
 // ============================
 
 document.getElementById("storyScore").innerHTML =
-"⭐ Iskor: "+score+"/15";
+"â­ Iskor: "+score+"/15";
 
 let feedback="";
 
 if(score>=9){
 
-feedback="🏆 Napakahusay! Kumpleto at makabuluhan ang iyong paliwanag.";
+feedback="ðŸ† Napakahusay! Kumpleto at makabuluhan ang iyong paliwanag.";
 
 }
 else if(score>=7){
 
-feedback="✅ Mahusay! May ilang bahagi pang maaaring dagdagan.";
+feedback="âœ… Mahusay! May ilang bahagi pang maaaring dagdagan.";
 
 }
 else if(score>=5){
 
-feedback="🙂 Katamtaman. Subukang ipaliwanag pa ang iyong sagot.";
+feedback="ðŸ™‚ Katamtaman. Subukang ipaliwanag pa ang iyong sagot.";
 
 }
 else{
 
-feedback="📖 Basahin muli ang kuwento at subukang sagutin muli.";
+feedback="ðŸ“– Basahin muli ang kuwento at subukang sagutin muli.";
 
 }
 
@@ -914,19 +914,19 @@ function submitReflection(){
 
     if(score>=9){
 
-        remarks="🏆 Napakahusay";
+        remarks="ðŸ† Napakahusay";
 
     }else if(score>=7){
 
-        remarks="🥇 Mahusay";
+        remarks="ðŸ¥‡ Mahusay";
 
     }else if(score>=5){
 
-        remarks="👍 Katamtaman";
+        remarks="ðŸ‘ Katamtaman";
 
     }else{
 
-        remarks="📖 Kailangang pagbutihin";
+        remarks="ðŸ“– Kailangang pagbutihin";
 
     }
 
