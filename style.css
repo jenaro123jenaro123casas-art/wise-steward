@@ -14,7 +14,7 @@ body{
 }
 
 .screen{
-  min-height:100vh; /* allow browser chrome without cutting content */
+  min-height:calc(var(--vh, 1vh) * 100); /* use dynamic viewport height to avoid browser UI overlap on mobile */
   display:flex;
   flex-direction:column;
   justify-content:flex-start;

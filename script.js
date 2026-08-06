@@ -1,4 +1,11 @@
-﻿const splash = document.getElementById("splash");
+﻿// Fix mobile viewport height to avoid browser UI overlapping (sets --vh CSS variable)
+function setVh(){
+  document.documentElement.style.setProperty('--vh', `${window.innerHeight * 0.01}px`);
+}
+setVh();
+window.addEventListener('resize', setVh);
+
+const splash = document.getElementById("splash");
 
 const login = document.getElementById("login");
 
